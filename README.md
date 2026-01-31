@@ -7,9 +7,9 @@ By using classical TCP socket programming and a user-friendly Java Swing GUI, th
 
 <div align="center">
   <picture>
-    <source srcset="assets/interaction_diagram_dark.png" media="(prefers-color-scheme: dark)">
-    <source srcset="assets/interaction_diagram_light.png" media="(prefers-color-scheme: light)">
-    <img src="assets/interaction_diagram_light.png" alt="Interaction Diagram" width="900px">
+    <source srcset="assets/interaction-diagram-dark.png" media="(prefers-color-scheme: dark)">
+    <source srcset="assets/interaction-diagram-light.png" media="(prefers-color-scheme: light)">
+    <img src="assets/interaction-diagram-light.png" alt="Interaction Diagram" width="900px">
   </picture>
 </div>
 
@@ -29,11 +29,11 @@ All components communicate using TCP sockets to ensure reliable, ordered data tr
   <table style="border: none;">
     <tr>
       <td align="center" style="border: none;">
-        <img src="assets/sensor_client_application_interface.png" width="500"/><br/>
+        <img src="assets/sensor-client-application-interface.png" width="500"/><br/>
         <sub><b>Figure 1:</b> Sensor Client Application Interface</sub>
       </td>
       <td align="center" style="border: none;">
-        <img src="assets/get_input_interface.png" width="500"/><br/>
+        <img src="assets/get-input-interface.png" width="500"/><br/>
         <sub><b>Figure 2:</b> Get Input Interface</sub>
       </td>
     </tr>
@@ -44,15 +44,15 @@ All components communicate using TCP sockets to ensure reliable, ordered data tr
   <table style="border: none;">
     <tr>
       <td align="center" style="border: none;">
-        <img src="assets/patient_health_information_interface.png" width="370"/><br/>
+        <img src="assets/patient-health-information-interface.png" width="370"/><br/>
         <sub><b>Figure 3:</b> Patient Health Information Interface</sub>
       </td>
       <td align="center" style="border: none;">
-        <img src="assets/personal_server_interface.png" width="370"/><br/>
+        <img src="assets/personal-server-interface.png" width="370"/><br/>
         <sub><b>Figure 4:</b> Personal Server Interface</sub>
       </td>
       <td align="center" style="border: none;">
-        <img src="assets/medical_server_interface.png" width="370"/><br/>
+        <img src="assets/medical-server-interface.png" width="370"/><br/>
         <sub><b>Figure 5:</b> Medical Server Interface</sub>
       </td>
     </tr>
@@ -63,15 +63,15 @@ All components communicate using TCP sockets to ensure reliable, ordered data tr
   <table style="border: none;">
     <tr>
       <td align="center" style="border: none;">
-        <img src="assets/sensor_client_application_terminal.png" width="370"/><br/>
+        <img src="assets/sensor-client-application-terminal.png" width="370"/><br/>
         <sub><b>Figure 6:</b> Sensor Client Application Terminal</sub>
       </td>
       <td align="center" style="border: none;">
-        <img src="assets/personal_server_terminal.png" width="370"/><br/>
+        <img src="assets/personal-server-terminal.png" width="370"/><br/>
         <sub><b>Figure 7:</b> Personal Server Terminal</sub>
       </td>
       <td align="center" style="border: none;">
-        <img src="assets/medical_server_terminal.png" width="370"/><br/>
+        <img src="assets/medical-server-terminal.png" width="370"/><br/>
         <sub><b>Figure 8:</b> Medical Server Terminal</sub>
       </td>
     </tr>
@@ -81,20 +81,20 @@ All components communicate using TCP sockets to ensure reliable, ordered data tr
 ## 📁 Project Structure
 
    ```bash
-    remote_health_monitoring_system/
+    remote-health-monitoring-system/
     ├── src/
     │   ├── icons/
-    │   ├── medical_server/
-    │   │   ├── gui_medical_server.java
-    │   │   └── medical_server.java
-    │   ├── personal_server/
-    │   │   ├── gui_personal_server.java
-    │   │   └── personal_server.java
-    │   └── sensor_client_app/
-    │       ├── gui_get_input.java
-    │       ├── gui_patient_health_info.java
-    │       ├── gui_sensor_client_app.java
-    │       └── sensor_client_app.java
+    │   ├── medicalServer/
+    │   │   ├── medicalServerGUI.java
+    │   │   └── medicalServer.java
+    │   ├── personalServer/
+    │   │   ├── personalServerGUI.java
+    │   │   └── personalServer.java
+    │   └── sensorClientApp/
+    │       ├── getInputGUI.java
+    │       ├── patientHealthInfoGUI.java
+    │       ├── sensorClientAppGUI.java
+    │       └── sensorClientApp.java
     └── README.md
    ```
 

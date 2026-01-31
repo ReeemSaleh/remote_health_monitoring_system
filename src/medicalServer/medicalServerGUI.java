@@ -1,10 +1,10 @@
-package medical_server;
+package medicalServer;
 
 // GUI class for alerting medical staff (e.g., nurses) 
-public class gui_medical_server extends javax.swing.JFrame {
+public class medicalServerGUI extends javax.swing.JFrame {
 
     // Constructor initializes UI and sets basic window properties
-    public gui_medical_server() {
+    public medicalServerGUI() {
         initComponents();
         setTitle("Medical Server"); // Set the window title
         setResizable(false); // Disable window resizing
@@ -129,12 +129,12 @@ public class gui_medical_server extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(gui_medical_server.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(medicalServerGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         // Launch the GUI on the Event Dispatch Thread
         java.awt.EventQueue.invokeLater(() -> {
-            new gui_medical_server().setVisible(true);
+            new medicalServerGUI().setVisible(true);
         });
     }
 

@@ -1,4 +1,4 @@
-package medical_server;
+package medicalServer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,12 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class medical_server {
+public class medicalServer {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         // Creat an object from the Action_interface to access the GUI printing method in the class
-        gui_medical_server alert= new gui_medical_server();
+        medicalServerGUI alert= new medicalServerGUI();
         
         
         //Creat a string (action) to store the action that appear on the (alert) GUI

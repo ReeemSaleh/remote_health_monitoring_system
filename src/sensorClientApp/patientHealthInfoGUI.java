@@ -1,73 +1,73 @@
-package personal_server;
+package sensorClientApp;
 
-// GUI class for the Personal Server interface
-public class gui_personal_server extends javax.swing.JFrame {
+// GUI class to display patient's health data
+public class patientHealthInfoGUI extends javax.swing.JFrame {
 
     // Constructor initializes UI and sets basic window properties
-    public gui_personal_server() {
+    public patientHealthInfoGUI() {
         initComponents();
-        setTitle("Personal Server"); // Set the window title
-        setResizable(false); // Disable resizing
+        setTitle("Patient Monitoring System"); // Set window title
+        setResizable(false); // Disable window resizing
     }
 
     // Initializes the components and layout.
     private void initComponents() {
 
-        // Component initialization
-        jPanel1 = new javax.swing.JPanel(); // Header panel
-        jLabel11 = new javax.swing.JLabel(); // Empty placeholder
-        Badge = new javax.swing.JLabel(); // Title label
-        jPanel2 = new javax.swing.JPanel(); // Main display panel
-        tempLabel = new javax.swing.JLabel(); 
-        oxText = new javax.swing.JTextField(); 
-        heartRateLabel = new javax.swing.JLabel(); 
-        oxygenLabel = new javax.swing.JLabel(); 
-        tempText = new javax.swing.JTextField(); 
-        heartText = new javax.swing.JTextField(); 
-        jLabel2 = new javax.swing.JLabel(); // Image icon label
+        // Declare and configure components
+        jPanel1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel(); // Placeholder label (not visible)
+        Badge = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        tempLabel = new javax.swing.JLabel();
+        oxText = new javax.swing.JTextField();
+        heartRateLabel = new javax.swing.JLabel();
+        oxygenLabel = new javax.swing.JLabel();
+        tempText = new javax.swing.JTextField();
+        heartText = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel(); // Icon label
 
-        // Configure window close operation and layout
+        // Configure window close operation
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        // Header panel style
+        // Top panel with title
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        // Title label setup
-        Badge.setFont(new java.awt.Font("Oriya MN", 0, 30)); // Font size and style
-        Badge.setForeground(new java.awt.Color(255, 255, 255)); // White text
-        Badge.setText("Personal Server"); // Title text
-        Badge.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR)); // Cursor style
+        // Header text
+        Badge.setFont(new java.awt.Font("Oriya MN", 0, 30));
+        Badge.setForeground(new java.awt.Color(255, 255, 255));
+        Badge.setText("Patient Health Information");
+        Badge.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        // Layout setup for header panel
+        // Layout configuration for top panel
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(227, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Badge)
-                        .addGap(280, 280, 280))))
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(227, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel11)
+                            .addGap(15, 15, 15))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(Badge)
+                            .addGap(200, 200, 200))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(Badge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(50, 50, 50))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(20, 20, 20)
+                    .addComponent(Badge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(50, 50, 50))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 140));
 
-        // Main panel (white background)
+        // Main panel to display sensor values
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(0, 204, 204));
 
@@ -123,85 +123,82 @@ public class gui_personal_server extends javax.swing.JFrame {
         heartText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         heartText.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 1, true));
 
-        // Smartphone image icon
+        // Smartphone icon
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/smartphone.png")));
 
-        // Layout for the main panel (jPanel2)
+        // Layout for jPanel2
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(oxygenLabel)
-                    .addComponent(heartRateLabel)
-                    .addComponent(tempLabel)
-                    .addComponent(oxText, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                    .addComponent(heartText)
-                    .addComponent(tempText))
-                .addGap(0, 54, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel2)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(oxygenLabel)
+                        .addComponent(heartRateLabel)
+                        .addComponent(tempLabel)
+                        .addComponent(oxText, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                        .addComponent(heartText)
+                        .addComponent(tempText))
+                    .addGap(0, 54, Short.MAX_VALUE))
         );
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(17)
-                        .addComponent(tempLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tempText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37)
-                        .addComponent(heartRateLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(heartText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37)
-                        .addComponent(oxygenLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(oxText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(31, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(17)
+                            .addComponent(tempLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(tempText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(37, 37, 37)
+                            .addComponent(heartRateLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(heartText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(37, 37, 37)
+                            .addComponent(oxygenLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(oxText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(50, 50, 50))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 790, 330));
 
-        // Set window size and center it
+        // Final window setup
         setSize(new java.awt.Dimension(1116, 674));
-        setLocationRelativeTo(null);
-
-        // Pack components tightly
+        setLocationRelativeTo(null); // Center window on screen
         pack();
     }
 
-    // Placeholder action method (unused)
+    // Action performed on temperature field (not used)
     private void tempTextActionPerformed(java.awt.event.ActionEvent evt) {
-        // No logic implemented
+        // No action implemented
     }
 
-    // Public method to update temperature text field
+    // Public method to update temperature display
     public void tempToString(String str){
         tempText.setText(str);
     }
 
-    // Public method to update heart rate text field
+    // Public method to update heart rate display
     public void heartToString(String str){
-       heartText.setText(str);
+        heartText.setText(str);
     }
 
-    // Public method to update oxygen level text field
+    // Public method to update oxygen level display
     public void oxToString(String str){
         oxText.setText(str);
     }
 
     // Main method to launch the GUI
     public static void main(String args[]) {
-
         try {
-            // Use Nimbus Look and Feel if available
+            // Apply Nimbus Look and Feel if available
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -209,14 +206,12 @@ public class gui_personal_server extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(gui_personal_server.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(patientHealthInfoGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         // Launch the GUI on the Event Dispatch Thread
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new gui_personal_server().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new patientHealthInfoGUI().setVisible(true);
         });
     }
 
